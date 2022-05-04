@@ -7,8 +7,9 @@ import { Quiz } from './model/Quiz';
 })
 export class QuizService {
 
-  quiz: Quiz= new Quiz("","");
+  quiz : Quiz = new Quiz("","",0,0,"",0);
 
+  
   constructor(private http:HttpClient) { }
   public addQuizes(quiz: Quiz){
     return this.http.post("http://localhost:8000/api/Quiz/add-quiz",quiz);

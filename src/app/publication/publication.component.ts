@@ -20,6 +20,7 @@ pub: Publication= new Publication(1,"","", null,null );
 
   ngOnInit(): void {
     this.user_id = JSON.parse(localStorage.getItem("userData")).id
+
   
   }
   public addPub(){

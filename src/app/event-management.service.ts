@@ -23,4 +23,7 @@ export class EventManagementService {
   public DeleteEvent(idEvent : number){
     return this.http.delete("http://localhost:8000/api/events/removeEvent/" +idEvent);
   }
+  public RemainingDays(idEvent : any){
+    return this.http.get(`http://localhost:8000/api/events/${idEvent}/remainingDays`);
+  }
 }

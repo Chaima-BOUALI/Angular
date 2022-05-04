@@ -9,7 +9,7 @@ import { QuizService } from '../quiz.service';
 })
 export class QuizComponent implements OnInit {
 message: any; 
-quiz : Quiz = new Quiz("","");
+quiz : Quiz = new Quiz("","",0,0,"",0);
   constructor(public service:QuizService) { }
 
   ngOnInit(): void {

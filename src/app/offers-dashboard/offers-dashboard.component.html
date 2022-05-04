@@ -12,6 +12,14 @@
                       <a href="/offer" class="btn btn-app">
                         <i class="fas fa-save"></i> Add New Offer Manually
                         </a>
+                        <div class="btn btn-app bg-warning">
+                          <i class="fas fa-user-friends" type="button" (click)="bestOffType()"> Best Offer Type
+                        </i>
+                        </div>
+                        <div class="btn btn-app bg-blue">
+                          <i class="fas fa-user-astronaut" type="button" (click)="MostUsedOfferType()"> Most Used Offer 
+                        </i>
+                        </div>
     <div class="card-body">
     <table id="example1" class="table table-bordered table-striped">
     <thead>
@@ -32,11 +40,18 @@
     <td><span class="badge bg-orange"><td>{{o.MaxOffers}}</td></span></td>
     <td><span class="badge bg-teal"><td>{{o.OffersNumber}}</td></span></td>
     <td>
-      <a href="/offer" class="btn btn-app bg-info">
-      <i class="fas fa-edit"></i> Edit
+
+      <a href="/offer" class="btn btn-small bg-info">
+      <i class="fas fa-edit"></i>
       </a>
-          <button type="button" (click)="DeleteOffers(o.idOffer, i)" class="btn btn-danger">Supprimer</button>
-       </td>
+<hr>
+          <div class="btn btn-small bg-danger">
+            <i class="fas fa-trash" type="button" (click)="DeleteOffers(o.idOffer)">
+          </i>
+          </div>
+          
+      
+        </td>
     
     </tr>
 

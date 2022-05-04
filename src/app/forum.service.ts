@@ -6,7 +6,6 @@ import { Forum } from './model/Forum';
   providedIn: 'root'
 })
 export class ForumService {
-forum: Forum= new Forum("","")
   constructor(public http: HttpClient) { }
   public addForum(forum: Forum) {
     return this.http.post("http://localhost:8000/api/ForumManagement/add",forum);
@@ -14,4 +13,8 @@ forum: Forum= new Forum("","")
   public showAll() {
     return this.http.get("http://localhost:8000/api/ForumManagement/showAll");
   }
-}
+  public Deleteforum(forum_id : number){
+    return this.http.delete("http://localhost:8000/api/ForumManagement/remove-forum/" +forum_id);
+  }
+  }
+

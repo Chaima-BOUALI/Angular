@@ -27,16 +27,23 @@
     <th>ID</th>
     <th>Quiz</th>
     <th>Quiz Date</th>
-    <th>Username</th>
-    <th>Score</th>
     <th>Best score</th>
     <th>Worst score</th>
     <th>Other Options</th>
+    <th>Score</th>
    
     </tr>
     </thead>
     <tbody>
     <tr>
+        <tr *ngFor="let q of quizes; let i =index">
+            <td>{{q.id}}</td>
+            <td>{{q.name}}</td>
+            <td>{{q.description}}</td>
+            <td>{{q.bestScore}}</td>
+            <td>{{q.worstScore}}</td>
+            <td>{{q.idUser}}</td>
+
     <td>183</td>
     <td>Quiz Linkedin</td>
     <td>11-02-2022</td>
