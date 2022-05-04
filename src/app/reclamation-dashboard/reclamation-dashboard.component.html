@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-12">
+    <div class="card">
+    <div class="card-header">
+        <div class="card-body" style="font-size: 20px;"class="card bg-teal" align="center">
+       
+            <strong>Reclamation Dashboard  </strong>          
+                      </div>    <div class="card-tools">
+    <div class="input-group input-group-sm" style="width: 150px;">
+    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+    <div class="input-group-append">
+    <button type="submit" class="btn btn-default">
+    <i class="fas fa-search"></i>
+    </button>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="card-body table-responsive p-0">
+     <table class="table table-hover text-nowrap">
+    <thead>
+    <tr>
+    <th>ID</th>
+    <th>Date</th>
+    <th>Reclamation Object</th>
+    <th>Status</th>
+    <th>Progress</th>
+    <th>Other Options</th>
+  
+
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of recs">  
+    <td>{{r.idR}}</td>
+    <td>{{r.dateReclamation}}</td>
+    <td>{{r.ObjectReclamation}}</td>
+    <td><span class="badge bg-warning">Pending</span></td>
+    <td>
+        <div class="progress progress-xs">
+        <div class="progress-bar bg-warning" style="width: 70%"></div>
+        </div>
+        </td>
+        <a href="#" class="btn btn-app bg-info">
+            <i class="fas fa-edit"></i> Edit
+            </a>
+            <a href="#" class="btn btn-app bg-danger">
+                <i class="fas fa-trash"></i> Delete
+                </a>
+    </tr>
+    
+    </tbody>
+    </table>
+    </div>
+    
+    </div>
+    
+    </div>
+    </div>
+    

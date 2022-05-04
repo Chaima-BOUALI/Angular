@@ -1,0 +1,41 @@
+
+<a href="/pub" class="btn btn-app">
+  <i class="fas fa-save"></i> Add New Publication Manually
+  </a>
+
+<!-- Main node for this component -->
+<div *ngFor="let p of pubs">
+<div class="timeline">
+  
+    <!-- Timeline time label -->
+    <div class="time-label">
+      <span class="bg-green">28-05-2022</span>
+    </div>
+    <div>
+      <!-- Before each timeline item corresponds to one icon on the left scale -->
+        <i class="fas fa-envelope bg-blue"></i>
+        <!-- Timeline item -->
+        <div class="timeline-item">
+      <!-- Time -->
+        <span class="time"><i class="fas fa-clock"></i>12:05</span>
+        <!-- Header. Optional -->
+        <h3 class="timeline-header"><a href="/about">Support Team</a> Added a new {{p.title}}</h3>
+        <!-- Body -->
+        <div class="timeline-body">
+         {{p.publication_txt}}
+        </div>
+        <!-- Placement of additional controls. Optional -->
+        <div class="timeline-footer">
+
+          <td> <button class="btn btn-success" (click)="like(p.likes)">like {{p.likes}}</button></td>
+          <td> <button class="btn btn-danger" (click)="dislike(p.dislike)">dislike {{p.dislikes}}</button></td>
+
+
+        </div>
+      
+        </div>
+    
+        </div>
+</div>
+</div>
+     
