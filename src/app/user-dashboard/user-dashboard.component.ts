@@ -11,7 +11,14 @@ export class UserDashboardComponent implements OnInit {
 users:any; 
 message:any;
 loyalusers:any; 
-user: User = new User("","","");
+user: User = {
+  id: null,
+  username: null,
+  email: null,
+  firstname: null,
+  lastname: null,
+  password: ''
+}
   constructor(public service: UserManagementService)  {}
 
   ngOnInit(): void {

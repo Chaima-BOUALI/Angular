@@ -21,7 +21,7 @@
 <div class="form-group">
     <div class="input-group-text">
     <span class="fas fa-user"></span>
-    <input class="form-control" required type="text" [(ngModel)]="user.username" type="username"
+    <input class="form-control" required type="text" [(ngModel)]="user.username" type="username" [ngModelOptions]="{standalone: true}"
     id="username" placeholder="User Name"/>
     <div class="status" id="status"></div>
     </div>
@@ -29,19 +29,23 @@
     <div class="form-group">
         <div class="input-group-text">
         <span class="fas fa-lock"></span>
-        <input class="form-control" required type="text" [(ngModel)]="user.password" type="password"
+        <input class="form-control" required type="text" [(ngModel)]="user.password" type="password" [ngModelOptions]="{standalone: true}"
         id="password" placeholder=" Password"/>
         <div class="status" id="status"></div>
         </div>
         </div>
 <div class="row">
 <div class="col-8">
+<div class="icheck-primary">
+<input type="checkbox" id="remember">
+<label for="remember">
+Remember Me
+</label>
+</div>
 </div>
 
 <div class="col-4">
-    <a href="/home" >
-        <input class="btn btn-success" type="button" name="submit_signup" value="signin" (click)="signinnew()">
-</a>
+<button type="submit" class="btn btn-success btn-block" (click)="signIn()">Sign In</button>
 </div>
 
 </div>
@@ -66,5 +70,12 @@
 </div>
 
 </div>
+
+
+<script src="../../plugins/jquery/jquery.min.js"></script>
+
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../dist/js/adminlte.min.js?v=3.2.0"></script>
 </body>
 

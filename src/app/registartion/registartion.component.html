@@ -21,20 +21,20 @@
 </div>
 <div class="card-body">
 <p class="login-box-msg">Welcome to W&W Family</p>
-<form [formGroup]="signupForm">
+<form action="../../index.html" method="post" ng-submit="signUp()">
 
-    <div class="form-group">
-        <div class="input-group-text">
-        <span class="fas fa-user"></span>
-        <input class="form-control" formcontrolName="username" required type="text" [(ngModel)]="user.username" type="text"  name="username"
-        id="username" placeholder="User name"/>
-        <div class="status" id="status"></div>
-        </div>
-        </div>   
+        <div class="form-group">
+            <div class="input-group-text">
+            <span class="fas fa-user"></span>
+            <input class="form-control" required type="text" [(ngModel)]="user.username" type="text" [ngModelOptions]="{standalone: true}"
+ placeholder="User Name"/>
+            <div class="status" id="status"></div>
+            </div>
+            </div>
 <div class="form-group">
 <div class="input-group-text">
 <span class="fas fa-envelope"></span>
-<input class="form-control" required type="text" [(ngModel)]="user.email" type="email"  name="email"
+<input class="form-control" required type="text" [(ngModel)]="user.email" type="email" [ngModelOptions]="{standalone: true}"
 id="email" placeholder="Email"/>
 <div class="status" id="status"></div>
 </div>
@@ -42,12 +42,31 @@ id="email" placeholder="Email"/>
 <div class="form-group">
     <div class="input-group-text">
     <span class="fas fa-lock"></span>
-    <input class="form-control" required type="text" [(ngModel)]="user.password" type="password"  name="password"
+    <input class="form-control" required type="text" [(ngModel)]="user.password" type="password" [ngModelOptions]="{standalone: true}"
     id="password" placeholder="Password"/>
     <div class="status" id="status"></div>
     </div>
     </div>
+    <div class="form-group">
+        <div class="input-group-text">
+        <span class="fas fa-lock"></span>
+        <input class="form-control" required type="text" [(ngModel)]="confirmPassword" type="password" [ngModelOptions]="{standalone: true}"
+        id="confirmPassword" placeholder="Retype Password"/>
+        <div class="status" id="status"></div>
+        
+        </div>
+      
+        <div class="form-group">
+            <div class="input-group-text">
+            <span class="fas fa-lock"></span>
+            <input class="form-control" required type="text" [(ngModel)]="user.role" type="role" [ngModelOptions]="{standalone: true}"
+            id="role" placeholder="Role"/>
+            <div class="status" id="status"></div>
+            </div>
+            </div>
 
+        
+        </div>
 <div class="row">
 <div class="col-8">
 
@@ -55,9 +74,11 @@ id="email" placeholder="Email"/>
 
 
     <div class="form-group">
-        <input class="btn btn-success" type="submit" name="submit_signup" value="Sign UP To W&W" (click)="signup()">
-  
-  </div>
+        <input class="btn btn-success" type="submit" name="submit_signup" value="signup" (click)="signUp()">
+    </div>
+    <div class="form-group">
+        <input class="btn btn-success" type="submit" name="submit_alert" value="alert" (click)="Alert()">
+    </div>
 </div>
 </form>
 
@@ -76,5 +97,12 @@ Sign up using LinkedIn
 
 </div>
 </div>
+
+
+<script src="../../plugins/jquery/jquery.min.js"></script>
+
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../dist/js/adminlte.min.js?v=3.2.0"></script>
 </body>
 </html>

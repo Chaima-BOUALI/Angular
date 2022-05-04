@@ -6,7 +6,7 @@ import { Publication } from './model/Publication';
   providedIn: 'root'
 })
 export class PublicationService {
-pub: Publication= new Publication("","",0,0, ""); 
+pub: Publication
 constructor(private http:HttpClient) { }
 public addPubs(pub: Publication){
   return this.http.post("http://localhost:8000/api/publication/add",pub);
@@ -14,7 +14,7 @@ public addPubs(pub: Publication){
 public ShowPub(){
   return this.http.get("http://localhost:8000/api/publication/all");
 }
-public addReaction(pub: Publication){
-  return this.http.post("http://localhost:8000/api/Reactions_Management/add-reaction",pub);
+public DeletePubs(pub_id : number){
+  return this.http.delete("http://localhost:8000/api/publication/delete/" +pub_id);
 }
 }
