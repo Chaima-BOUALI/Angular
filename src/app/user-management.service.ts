@@ -7,7 +7,14 @@ import { User } from './model/User';
   providedIn: 'root'
 })
 export class UserManagementService {
-  user : User = new User("","","");
+  user: User = {
+    id: null,
+    username: null,
+    email: null,
+    firstname: null,
+    lastname: null,
+    password: ''
+  }
   constructor(private http:HttpClient) { }
   
   public getUsers(){

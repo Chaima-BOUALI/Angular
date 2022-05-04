@@ -8,8 +8,15 @@ import { UserManagementService } from '../user-management.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  user : User = new User("","","");
-message : any; 
+  user: User = {
+    id: null,
+    username: null,
+    email: null,
+    firstname: null,
+    lastname: null,
+    password: ''
+  }
+  message : any; 
   constructor(public service : UserManagementService) { }
 
   ngOnInit(): void {
