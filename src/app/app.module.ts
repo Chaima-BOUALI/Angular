@@ -45,6 +45,7 @@ import { AlertComponent } from './alert/alert.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModifyDialogComponent } from './modify-dialog/modify-dialog.component';
 import { MonthlystatComponent } from './monthlystat/monthlystat.component';
+import { DatePipe } from '@angular/common';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
@@ -78,7 +79,6 @@ const routes: Routes = [
   { path: 'pub', component: PublicationComponent  },
   { path: 'user', component: UserComponent  },
   { path: 'alert', component: AlertComponent },
-  
   { path: 'monthly stat', component: MonthlystatComponent },
 
   { path: '**', component: LandingPageComponent },
@@ -138,8 +138,9 @@ const routes: Routes = [
     ReactiveFormsModule,
     BrowserAnimationsModule,
 
+
   ],
-  providers: [UserRegistartionService, EventManagementService],
+  providers: [UserRegistartionService, EventManagementService, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
