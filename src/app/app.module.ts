@@ -46,6 +46,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModifyDialogComponent } from './modify-dialog/modify-dialog.component';
 import { MonthlystatComponent } from './monthlystat/monthlystat.component';
 import { DatePipe } from '@angular/common';
+import { MailComponent } from './mail/mail.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
@@ -80,6 +81,7 @@ const routes: Routes = [
   { path: 'user', component: UserComponent  },
   { path: 'alert', component: AlertComponent },
   { path: 'monthly stat', component: MonthlystatComponent },
+  { path: 'mail', component: MailComponent },
 
   { path: '**', component: LandingPageComponent },
 
@@ -126,7 +128,8 @@ const routes: Routes = [
     ReclamationManagmentComponent,
     AlertComponent,
     ModifyDialogComponent,
-    MonthlystatComponent, 
+    MonthlystatComponent,
+    MailComponent, 
     
   ],
   imports: [
