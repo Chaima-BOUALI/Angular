@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="row">
     <div class="col-12">
     <div class="card">
@@ -63,3 +64,78 @@
     </div>
     </div>
     
+=======
+
+    
+    <section class="content">
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-12">
+    
+    <div class="card">
+        <div class="card-header">
+            <div class="card-body" style="font-size: 20px;"class="card bg-teal" align="center">
+           
+                <strong>Partnerships Dashboard    </strong>          
+                          </div>    </div>
+                          <a href="/partnership" class="btn btn-app">
+                            <i class="fas fa-save"></i> Add New Partnership Manually
+                            </a>
+        <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Partnership Name</th>
+            <th>Partnership Description</th>
+            <th>Partnership Event Attendancy</th>
+            <th>Other Options</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of partnerships">
+        <td>{{p.idPartnership}}</td>
+        <td>{{p.namePartnership}}</td>
+        <td>{{p.partnershipDescription}}</td>
+        <td><span class="badge bg-teal"><td>{{p.EventAttendency}}</td></span></td>
+       
+        <td><a href="/partnershipsdash" class="btn btn-app bg-info">
+          <i class="fas fa-edit"></i> Edit
+          </a>
+          <a href="/partnershipsdash" class="btn btn-app bg-danger">
+              <i class="fas fa-trash" type="submit" name="delete_detelepartnership"  (click)="DeletePartnership(p.idPartnership)"></i> Delete
+              </a>
+            </td>
+        
+        </tr>
+    
+        
+                                                                                                                                                                                            
+        </table>
+        </div>
+        
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+        <script>
+            $(function () {
+              $("#example1").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+              }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+              $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+              });
+            });
+          </script>
+      
+    
+>>>>>>> c1a0fdd248780924d423ec330051c0e91c0d80ad

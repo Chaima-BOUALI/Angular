@@ -39,6 +39,7 @@
     </thead>
     <tbody>
     <tr *ngFor="let e of events">
+    <tr *ngFor="let e of events; let i = index">
     <td>{{e.idEvent}}</td>
     <td>{{e.name}}</td>
     <td>{{e.eventTopic}}</td>
@@ -57,6 +58,14 @@
             <a href="#" class="btn btn-app bg-danger">
                 <i class="fas fa-trash"></i> Delete
                 </a>
+        <td>
+        <a href="/event" class="btn btn-app bg-info">
+            <i class="fas fa-edit"></i> Edit
+            </a>
+            <a href="/eventsdash">
+                <button type="button" (click)="DeleteEvents(e.idEvent, i )" class="btn btn-danger">Supprimer</button>
+              </a> 
+            </td>
     </tr>
     </tbody>
     </table>

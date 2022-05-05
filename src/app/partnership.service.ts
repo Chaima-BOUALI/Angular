@@ -15,4 +15,10 @@ partnership:Partnership= new Partnership("","",0,"")
 public retrievePartnership(){
   return this.http.get("http://localhost:8000/api/Partnership_Management/ShowPartnerships/{Partnership-id}");
 }
+public retrievePartnerships(){
+  return this.http.get("http://localhost:8000/api/Partnership_Management/showpartnerships");
+}
+public DeletePartnerships(idPartnership : number){
+  return this.http.delete("http://localhost:8000/api/offers/remove-partners/" +idPartnership);
+}
 }

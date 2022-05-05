@@ -22,6 +22,11 @@
     <th>Maximum offers</th>
     <th>Offer Order</th>
     <th>Offer Description</th>
+=======
+    <th>Offer Description</th>
+    <th>Maximum offers</th>
+    <th>Offer Order</th>
+>>>>>>> c1a0fdd248780924d423ec330051c0e91c0d80ad
     <th>Other Options</th>
     </tr>
     </thead>
@@ -38,6 +43,19 @@
       <a href="#" class="btn btn-app bg-danger">
           <i class="fas fa-trash"></i> Delete
           </a>
+
+      <tr *ngFor="let o of offers; let i = index">
+    <td>{{o.idOffer}}</td>
+    <td>{{o.nameOffer}}</td>
+    <td>{{o.descriptionOffer}}</td>
+    <td><span class="badge bg-orange"><td>{{o.MaxOffers}}</td></span></td>
+    <td><span class="badge bg-teal"><td>{{o.OffersNumber}}</td></span></td>
+    <td>
+      <a href="/offer" class="btn btn-app bg-info">
+      <i class="fas fa-edit"></i> Edit
+      </a>
+          <button type="button" (click)="DeleteOffers(o.idOffer, i)" class="btn btn-danger">Supprimer</button>
+       </td>
     
     </tr>
 

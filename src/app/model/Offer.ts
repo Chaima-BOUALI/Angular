@@ -5,5 +5,5 @@ export class Offer{
     OffersNumber:number; 
     descriptionOffer:String;
     constructor(nameOffer:String, MaxOffers:number, OfferNumber:number, descriptionOffer:String,
-        ){}
+      ){}
 }

@@ -19,7 +19,7 @@ export class EventComponent implements OnInit {
   }
   public addEvents(){
     //console.log(this.event.Description);
-  let resp = this.service.addEvents(event);
+  let resp = this.service.addEvents(this.event);
   resp.subscribe((data)=>this.message = data);
 }
 public EditEvents(){

@@ -15,4 +15,7 @@ offer: Offer= new Offer("",0,0,"");
   public getOffers(){
     return this.http.get("http://localhost:8000/api/offers/showOffers");
   }
+  public DeleteOffers(idOffer : number){
+    return this.http.delete("http://localhost:8000/api/offers/remove-Offers/" +idOffer);
+  }
 }

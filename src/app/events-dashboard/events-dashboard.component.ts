@@ -9,6 +9,9 @@ import { EventManagementService } from '../event-management.service';
 export class EventsDashboardComponent implements OnInit {
   events:any;
 
+message: any; 
+event:Event=new Event("");
+
   constructor(public service: EventManagementService) { }
 
   ngOnInit(): void {
@@ -18,4 +21,11 @@ export class EventsDashboardComponent implements OnInit {
 
   }
 
+
+  public DeleteEvents(idEvent : number, i: any){
+    this.service.DeleteEvent(idEvent).subscribe((data)=>{
+      this.events.splice(i,1); 
+    }); 
+  
+  }
 }

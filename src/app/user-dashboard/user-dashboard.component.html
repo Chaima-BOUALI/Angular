@@ -12,6 +12,12 @@
                       <a href="/user" class="btn btn-app">
                         <i class="fas fa-save"></i> Add New Users Manually
                         </a>
+<<<<<<< HEAD
+=======
+                       
+
+                        
+>>>>>>> c1a0fdd248780924d423ec330051c0e91c0d80ad
     <div class="card-body">
     <table id="example1" class="table table-bordered table-striped">
     <thead>
@@ -29,8 +35,13 @@
     </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
     <tr *ngFor="let u of users">
     <td>{{u.idUser}}</td>
+=======
+    <tr *ngFor="let u of users; let i =index">
+    <td>{{u.id}}</td>
+>>>>>>> c1a0fdd248780924d423ec330051c0e91c0d80ad
     <td>{{u.adress}}</td>
     <td>{{u.email}}</td>
     <td>{{u.firstName}}</td>
@@ -39,6 +50,7 @@
     <td>{{u.username}}</td>
     <td><a href="https://www.linkedin.com/in/chayma-boualy-5a6a001b1/"></a> @ChaymaBoualy</td>
     <td><span class="badge bg-teal">Administrator</span></td>
+<<<<<<< HEAD
     <a href="#" class="btn btn-app bg-info">
         <i class="fas fa-edit"></i> Edit
         </a>
@@ -46,6 +58,17 @@
             <i class="fas fa-trash"></i> Delete
             </a>
     </tr>                           
+=======
+    <td>
+    <a href="/user" class="btn btn-app bg-info">
+        <i class="fas fa-edit"></i> Edit
+        </a>
+          <button type="button" (click)="DeleteUser(u.id, i)" class="btn btn-danger">Supprimer</button>
+     
+        </td>
+    </tr>   
+                            
+>>>>>>> c1a0fdd248780924d423ec330051c0e91c0d80ad
     </tbody>
   
     </table>
@@ -56,6 +79,7 @@
     </div>
     </div>
     </section>
+<<<<<<< HEAD
     <script>
         $(function () {
           $("#example1").DataTable({
@@ -73,4 +97,6 @@
           });
         });
       </script>
+=======
+>>>>>>> c1a0fdd248780924d423ec330051c0e91c0d80ad
   
