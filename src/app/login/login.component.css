@@ -1,7 +1,7 @@
 .login-page, .register-page {
     align-items: center;
     background-color: #343a40;
-    background-image: url(../../assets/img/work.jpg);
+    background-image: url(../../assets/img/welcome.jpg);
  
  /* Center and scale the image nicely */
  background-position: center;
