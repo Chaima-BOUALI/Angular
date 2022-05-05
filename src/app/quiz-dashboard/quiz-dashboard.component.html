@@ -40,17 +40,10 @@
             <td>{{q.id}}</td>
             <td>{{q.name}}</td>
             <td>{{q.description}}</td>
-            <td>{{q.bestScore}}</td>
-            <td>{{q.worstScore}}</td>
-            <td>{{q.idUser}}</td>
-
-    <td>183</td>
-    <td>Quiz Linkedin</td>
-    <td>11-02-2022</td>
-    <td>Chayma Boualy</td>
-    <td><span class="badge bg-indigo">15<b style="font-size: 5px; color:aqua">/20</b></span></td>
-    <td><span class="badge bg-teal">17<b style="font-size: 5px; color:darkblue">/20</b></span></td>
-    <td><span class="badge bg-orange">03<b style="font-size: 5px; color:whitesmoke">/20</b></span></td>
+            <td><span class="badge bg-indigo">{{q.bestScore}}<b style="font-size: 5px; color:aqua">/20</b></span></td>
+    <td><span class="badge bg-teal">{{q.worstScore}}<b style="font-size: 5px; color:darkblue">/20</b></span></td>
+<td>
+    
     <a href="#" class="btn btn-app bg-info">
         <i class="fas fa-edit"></i> Edit
         </a>
@@ -60,6 +53,12 @@
             <a href="#" class="btn btn-app bg-warning">
                 <i class="fas fa-file-download"></i> Download
                 </a>
+                </td>
+                <td>
+                    <a href="/quizdash" class="btn btn-app bg-transparent">
+                        <i class="fas fa-file-signature"></i> Your Score
+                        </a> 
+                </td>
 </tr>
     
     

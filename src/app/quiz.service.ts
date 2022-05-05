@@ -15,6 +15,6 @@ export class QuizService {
     return this.http.post("http://localhost:8000/api/Quiz/add-quiz",quiz);
   }
   public ShowQuiz(){
-    return this.http.get("http://localhost:8000/api/Quiz/show-quiz");
+    return this.http.get("http://localhost:8000/api/Quiz/showQuiz");
   }
 }
