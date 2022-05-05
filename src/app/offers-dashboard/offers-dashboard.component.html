@@ -1,0 +1,71 @@
+<section class="content">
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-12">
+
+<div class="card">
+    <div class="card-header">
+        <div class="card-body" style="font-size: 20px;"class="card bg-teal" align="center">
+       
+            <strong>Offers Dashboard    </strong>          
+                      </div>    </div>
+                      <a href="/offer" class="btn btn-app">
+                        <i class="fas fa-save"></i> Add New Offer Manually
+                        </a>
+    <div class="card-body">
+    <table id="example1" class="table table-bordered table-striped">
+    <thead>
+    <tr>
+    <th>ID </th>
+    <th>Offer Name</th>
+    <th>Ofer Description</th>
+    <th>Maximum offers</th>
+    <th>Offer Order</th>
+    <th>Offer Description</th>
+    <th>Other Options</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let o of offers">
+    <td>{{o.idOffer}}</td>
+    <td>{{o.nameOffer}}</td>
+    <td><span class="badge bg-orange"><td>{{o.MaxOffers}}</td></span></td>
+    <td><span class="badge bg-teal"><td>{{o.OffersNumber}}</td></span></td>
+    <td>{{o.descriptionOffer}}</td>
+    <a href="/offer" class="btn btn-app bg-info">
+      <i class="fas fa-edit"></i> Edit
+      </a>
+      <a href="#" class="btn btn-app bg-danger">
+          <i class="fas fa-trash"></i> Delete
+          </a>
+    
+    </tr>
+
+    
+                                                                                                                                                                                        
+    </table>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <script>
+        $(function () {
+          $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+          }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+          $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+          });
+        });
+      </script>
+  

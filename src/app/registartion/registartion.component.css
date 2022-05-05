@@ -1,0 +1,9 @@
+p,
+label {
+    margin-top: 12px;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}

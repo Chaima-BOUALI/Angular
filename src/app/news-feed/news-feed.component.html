@@ -1,0 +1,50 @@
+
+<a href="/pub" class="btn btn-app">
+  <i class="fas fa-save"></i> Add New Publication Manually
+  </a>
+
+<!-- Main node for this component -->
+<div *ngFor="let p of pubs">
+<div class="timeline">
+  
+    <!-- Timeline time label -->
+    <div class="time-label">
+      <span class="bg-green">{{p.date}}</span>
+    </div>
+    <div>
+      <!-- Before each timeline item corresponds to one icon on the left scale -->
+        <i class="fas fa-envelope bg-blue"></i>
+        <!-- Timeline item -->
+        <div class="timeline-item">
+      <!-- Time -->
+        <span class="time"><i class="fas fa-clock"></i> {{p.time}}</span>
+        <!-- Header. Optional -->
+        <h3 class="timeline-header"><a href="/about">Support Team</a> Added a new {{p.title}}</h3>
+        <!-- Body -->
+        <div class="timeline-body">
+         {{p.publication_txt}}
+        </div>
+        <!-- Placement of additional controls. Optional -->
+        <div class="timeline-footer">
+          <!-- <a class="btn btn-success btn-sm">Read more</a> -->
+          <div class="form-group">
+            
+            <input class="btn btn-danger" type="button" value="Delete Publication" (click)="DeletePub(p.id)">
+           
+          </div>
+          <div class="form-group">
+            <div class="input-group-text">
+              <span class="fas fa-barcode"></span>
+              <input class="form-control" required type="text" type="text" id="eventTopic"
+                placeholder=" comment on this post" />
+                <input class="btn btn-primary" type="button" value="Comment" >
+
+              <div class="status" id="status"></div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+</div>
+</div>
+     

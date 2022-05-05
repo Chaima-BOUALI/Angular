@@ -1,0 +1,76 @@
+<section class="content">
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-12">
+
+<div class="card">
+    <div class="card-header">
+        <div class="card-body" style="font-size: 20px;"class="card bg-teal" align="center">
+       
+            <strong>Users Dashboard    </strong>          
+                      </div>    </div>
+                      <a href="/user" class="btn btn-app">
+                        <i class="fas fa-save"></i> Add New Users Manually
+                        </a>
+    <div class="card-body">
+    <table id="example1" class="table table-bordered table-striped">
+    <thead>
+    <tr>
+    <th>User id </th>
+    <th>Adress</th>
+    <th>Email</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Postal Code</th>
+    <th>User Name</th>
+    <th><i class="fab fa-linkedin mr-2"></i>Linkedin Profile</th>
+    <th>Role</th>
+    <th>More Options</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let u of users">
+    <td>{{u.idUser}}</td>
+    <td>{{u.adress}}</td>
+    <td>{{u.email}}</td>
+    <td>{{u.firstName}}</td>
+    <td>{{u.lastname}}</td>
+    <td>{{u.postalCode}}</td>
+    <td>{{u.username}}</td>
+    <td><a href="https://www.linkedin.com/in/chayma-boualy-5a6a001b1/"></a> @ChaymaBoualy</td>
+    <td><span class="badge bg-teal">Administrator</span></td>
+    <a href="#" class="btn btn-app bg-info">
+        <i class="fas fa-edit"></i> Edit
+        </a>
+        <a href="#" class="btn btn-app bg-danger">
+            <i class="fas fa-trash"></i> Delete
+            </a>
+    </tr>                           
+    </tbody>
+  
+    </table>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <script>
+        $(function () {
+          $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+          }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+          $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+          });
+        });
+      </script>
+  
