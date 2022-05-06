@@ -17,8 +17,4 @@ public ShowPub(){
 public DeletePubs(pub_id : number){
   return this.http.delete("http://localhost:8000/api/publication/delete/" +pub_id);
 }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c1a0fdd248780924d423ec330051c0e91c0d80ad
