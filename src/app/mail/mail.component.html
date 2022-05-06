@@ -2,8 +2,11 @@
 <div class="row">
     <div class="col-xs-12">
         <div class="container">
-            <h3 class="card-header text-center my-5">New Mail</h3>
-
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-body" style="font-size: 20px;"class="card bg-blue" align="center">
+                   
+                        New Mail
             <form #form="ngForm" (ngSubmit)="onSubmit(form)">
                 <div class="input-group">
                     <span class="input-group-text" id="from">From</span>
@@ -18,7 +21,7 @@
 
                     <input type="text" class="form-control" name="to" ngModel required email #to="ngModel">
 
-                    <div class="input-group text-danger" *ngIf="to.invalid && form.controls['to'].touched">
+                    <div class="input-group text-warning" *ngIf="to.invalid && form.controls['to'].touched">
                         <span *ngIf="to.hasError('required')">To field must required!!</span>
                         <span *ngIf="to.hasError('email')">To field must contain a valid email!!</span>
                     </div>
@@ -50,7 +53,7 @@
                     </editor> -->
                 </div>
 
-                <button class="btn-outline-success" mat-raised-button color="success" [disabled]="!form.valid">Send</button>
+                <button class="btn-app" mat-raised-button color="success" [disabled]="!form.valid">Send</button>
             </form>
         </div>
     </div>
