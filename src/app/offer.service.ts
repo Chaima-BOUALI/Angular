@@ -18,4 +18,12 @@ export class OfferService {
   public DeleteOffers(idOffer : number){
     return this.http.delete("http://localhost:8000/api/offers/remove-Offers/" +idOffer);
   }
+
+  public bestOffType(){
+    return this.http.get("http://localhost:8000/api/offers/bestOfferType");
+  }
+  
+  public MostUsedOfferType(){
+    return this.http.get("http://localhost:8000/api/offers/modtUsedType");
+  }
 }

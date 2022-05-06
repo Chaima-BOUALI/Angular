@@ -5,7 +5,10 @@
         <div class="card-body" style="font-size: 20px;"class="card bg-teal" align="center">
        
             <strong>Events Dashboard    </strong>          
-                      </div>    <div class="card-tools">
+                      </div>   
+                     
+                       <div class="card-tools">
+                           
     <div class="input-group input-group-sm" style="width: 150px;">
     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
     <div class="input-group-append">
@@ -16,11 +19,13 @@
     </div>
     </div>
     </div>
+    
     <div class="social-auth-links text-center mt-2 mb-3">
     
             <a href="/event" class="btn btn-app">
                 <i class="fas fa-save"></i> Add New Event Manually
                 </a>
+               
     <div class="card-body table-responsive p-0">
      <table class="table table-hover text-nowrap">
     <thead>
@@ -32,7 +37,7 @@
     <th>Event Date</th>
     <th>Event Max Attendance</th>
     <th>Status</th>
-    <th>Progress</th>
+    <th>Remaining Days </th>
     <th>Other Options</th>
 
     </tr>
@@ -45,19 +50,24 @@
     <td>{{e.Description}}</td>
     <td>{{e.date}}</td>
     <td><span class="badge bg-teal">120 person</span></td>
-    <td><span class="badge bg-warning">Pending</span></td>
+    <td><span class="badge bg-gradient-cyan">Pending</span></td>
     <td>
-        <div class="progress progress-xs">
-        <div class="progress-bar bg-warning" style="width: 70%"></div>
-        </div>
+        <div class="btn btn-small bg-warning">
+            <i class="fas fa-clock" type="button" (click)="RemainingDays(e.idEvent)"> 
+          </i>
+          </div>
         </td>
         <td>
-        <a href="/event" class="btn btn-app bg-info">
-            <i class="fas fa-edit"></i> Edit
+        <a href="/event" class="btn btn-small bg-info">
+            <i class="fas fa-edit"></i> 
             </a>
-            <a href="/eventsdash">
-                <button type="button" (click)="DeleteEvents(e.idEvent, i )" class="btn btn-danger">Supprimer</button>
-              </a> 
+            <div class="btn btn-small bg-danger">
+                <i class="fas fa-trash" type="button" (click)="DeleteEvents(e.idEvent)">
+              </i>
+              </div>
+              <a href="/mail" class="btn btn-small bg-teal">
+                <i class="fas fa-voicemail"></i> 
+                </a>  
             </td>
     </tr>
     </tbody>

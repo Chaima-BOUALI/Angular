@@ -1,0 +1,60 @@
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-body" style="font-size: 20px;"class="card bg-blue" align="center">
+                   
+                        New Mail
+            <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+                <div class="input-group">
+                    <span class="input-group-text" id="from">From</span>
+                    <input type="text" class="form-control" name="From" ngModel required email #to="ngModel">
+
+                </div>
+
+                <div class="input-group my-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="to">To</span>
+                    </div>
+
+                    <input type="text" class="form-control" name="to" ngModel required email #to="ngModel">
+
+                    <div class="input-group text-warning" *ngIf="to.invalid && form.controls['to'].touched">
+                        <span *ngIf="to.hasError('required')">To field must required!!</span>
+                        <span *ngIf="to.hasError('email')">To field must contain a valid email!!</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="subject">Subject</span>
+                    </div>
+
+                    <input type="text" class="form-control" name="subject" ngModel>
+                </div>
+
+                <div class="input-group my-3">
+                    <textarea type="text" class="form-control" name="message" rows="10" cols="10" ngModel></textarea>
+                    <!-- <editor name="message" ngModel required [init]="{
+                        width: 1265,
+                        height: 300,
+                        menubar: false,
+                        plugins: [
+                        'advlist autolink lists link image charmap print preview anchor',
+                        'searchreplace visualblocks code fullscreen',
+                        'insertdatetime media table paste code help wordcount'
+                        ],
+                        toolbar: 'undo redo | formatselect | bold italic backcolor | \
+                                  alignleft aligncenter alignright alignjustify | \
+                                  bullist numlist outdent indent | removeformat | help'
+                        }">
+                    </editor> -->
+                </div>
+
+                <button class="btn-app" mat-raised-button color="success" [disabled]="!form.valid">Send</button>
+            </form>
+        </div>
+    </div>
+</div>

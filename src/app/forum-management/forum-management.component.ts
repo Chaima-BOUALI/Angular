@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { switchAll } from 'rxjs';
 import { ForumService } from '../forum.service';
 import { Forum } from '../model/Forum';
 
@@ -8,8 +9,8 @@ import { Forum } from '../model/Forum';
   styleUrls: ['./forum-management.component.css']
 })
 export class ForumManagementComponent implements OnInit {
-forum:Forum= new Forum("",""); 
-message:any; 
+forum : Forum = new Forum("","",0,0);
+  message:any; 
   constructor(private service: ForumService) { }
 
   ngOnInit(): void {
@@ -18,4 +19,5 @@ message:any;
     let resp = this.service.addForum(this.forum);
 resp.subscribe((data)=> this.message = data);
 }
+
 }

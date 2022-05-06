@@ -13,7 +13,10 @@
                         <i class="fas fa-save"></i> Add New Users Manually
                         </a>
                        
-
+                        <div class="btn btn-app bg-warning">
+                            <i class="fas fa-user" type="button" (click)="MostLoyal()"> Most Loyal user
+                          </i>
+                          </div>
                         
     <div class="card-body">
     <table id="example1" class="table table-bordered table-striped">
@@ -43,11 +46,16 @@
     <td><a href="https://www.linkedin.com/in/chayma-boualy-5a6a001b1/"></a> @ChaymaBoualy</td>
     <td><span class="badge bg-teal">Administrator</span></td>
     <td>
-    <a href="/user" class="btn btn-app bg-info">
-        <i class="fas fa-edit"></i> Edit
+    <a href="/user" class="btn btn-small bg-info">
+        <i class="fas fa-edit"></i> 
         </a>
-          <button type="button" (click)="DeleteUser(u.id, i)" class="btn btn-danger">Supprimer</button>
-     
+        <div class="btn btn-small bg-danger">
+            <i class="fas fa-trash" type="button" (click)="DeleteUser(u.idUser)">
+          </i>
+          </div>  
+          <a href="/mail" class="btn btn-small bg-teal">
+            <i class="fas fa-voicemail"></i> 
+            </a>   
         </td>
     </tr>   
                             

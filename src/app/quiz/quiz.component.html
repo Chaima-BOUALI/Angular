@@ -25,13 +25,32 @@
                 <div class="input-group-text">
                 <span class="fas fa-barcode"></span>
                 <input class="form-control" required type="text" [(ngModel)]="quiz.description" type="text"
-                id="eventTopic" placeholder="Quiz Description"/>
+                id="quizdescription" placeholder="Quiz Description"/>
                 <div class="status" id="status"></div>
                 </div>
                 </div>
+                <div class="form-group">
+                  <div class="input-group-text">
+                  <span class="fas fa-barcode"></span>
+                  <input class="form-control" required type="number" [(ngModel)]="quiz.bestScore" type="number"
+                  id="bestScore" placeholder="Best Score So far"/>
+                  <div class="status" id="status"></div>
+                  </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group-text">
+                    <span class="fas fa-barcode"></span>
+                    <input class="form-control" required type="number" [(ngModel)]="quiz.worstScore" type="number"
+                    id="worstScore" placeholder="Worst Score So far"/>
+                    <div class="status" id="status"></div>
+                    </div>
+                    </div>
+                    
                 
                         <div class="form-group">
+                          <a href="/quizdash">
                             <input class="btn btn-success" type="submit" name="submit_addquiz" value="Add a new quiz" (click)="addquiz()">
+                          </a>
                         </div>
                         <a href="/quizdash" class="small-box-footer">
                           Consult All Current Quizes <i class="fas fa-arrow-circle-right"></i>
