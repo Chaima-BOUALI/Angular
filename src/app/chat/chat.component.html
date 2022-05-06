@@ -178,7 +178,9 @@ Dhafer Jlassi                  <small class="contacts-list-date float-right">1/4
         <div class="input-group">
           <input type="text" name="message" placeholder="Type Message ..." class="form-control">
           <span class="input-group-append">
-            <button type="button" class="btn btn-primary">Send</button>
+            <div class="form-group">            
+              <input class="btn btn-success" type="button" name="submit_sendMsg" value="Send" (click)="send(msg)">
+          </div>
           </span>
         </div>
       </form>
