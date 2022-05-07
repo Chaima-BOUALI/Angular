@@ -1,0 +1,56 @@
+
+    <div class="container">
+        <div class="card">
+    <div class="card-header">
+        <div class="card-body" style="font-size: 20px;"class="card bg-teal" align="center">
+       
+            <strong> Modify Information    </strong>     
+        </div>
+
+        <p class="product-title">Modify</p>
+
+
+
+
+        <form  (submit)="{sendPost}">
+  
+  First Name <input #FirstName (keyup)="processKeyupFirstName(FirstName.value)" style="border: #0a001f;border-radius: 4px" class="text-black"  formControlName="First Name" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  Last Name <input #LastName (keyup)="processKeyupLastName(LastName.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="Last Name" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  User Name <input #Username (keyup)="processKeyupUserName(LastName.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="User Name" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  Email Address <input #email (keyup)="processKeyupEmail(email.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="Email" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  Address  <input #adress (keyup)="processKeyupAdress(adress.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="Address" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+    Postal Code <input #pc (keyup)="processKeyupPostalCode(pc.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="Postal Code" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+
+
+
+  <br>
+  <br>
+  <button mat-button type="submit" class="btn-success" style="height: 40px;width: 120px">Submit Changes</button>
+</form>
+
+
+</div></div></div>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormBuilder, FormGroup, ReactiveFormsModule, ɵInternalFormsSharedModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -31,6 +31,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserRegistartionService } from './user-registartion.service'; 
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { OverlayModule } from "@angular/cdk/overlay";
 import { EventManagementService } from './event-management.service';
 import { QuizesForUsersComponent } from './quizes-for-users/quizes-for-users.component';
 import { TakeQuizComponent } from './take-quiz/take-quiz.component';
@@ -47,6 +48,12 @@ import { ModifyDialogComponent } from './modify-dialog/modify-dialog.component';
 import { MonthlystatComponent } from './monthlystat/monthlystat.component';
 import { DatePipe } from '@angular/common';
 import { MailComponent } from './mail/mail.component';
+import { ModifyDialogUserComponent } from './modify-dialog-user/modify-dialog-user.component';
+import {MAT_DIALOG_DATA, MatDialogModule, MatDialogContainer, MatDialog} from "@angular/material/dialog";
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {DragDropModule} from "@angular/cdk/drag-drop";
+import {MatDivider, MatDividerModule} from "@angular/material/divider";
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
@@ -82,7 +89,7 @@ const routes: Routes = [
   { path: 'alert', component: AlertComponent },
   { path: 'monthly stat', component: MonthlystatComponent },
   { path: 'mail', component: MailComponent },
-
+  { path: 'modify', component: ModifyDialogComponent },
   { path: '**', component: LandingPageComponent },
 
 
@@ -129,9 +136,12 @@ const routes: Routes = [
     AlertComponent,
     ModifyDialogComponent,
     MonthlystatComponent,
-    MailComponent, 
+    MailComponent,
+    ModifyDialogUserComponent, 
     
   ],
+  entryComponents:[ModifyDialogUserComponent],
+
   imports: [
     BrowserModule,
     AppRoutingModule, 
@@ -140,10 +150,19 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    DragDropModule,
+    ReactiveFormsModule,
+    OverlayModule,
+    MatDialogModule,
+    MatDividerModule    
 
 
   ],
-  providers: [UserRegistartionService, EventManagementService, DatePipe],
+  providers: [{ provide: MAT_DIALOG_DATA, useValue: {} }, 
+    { provide: ModifyDialogComponent, useValue: {} },UserRegistartionService, EventManagementService, DatePipe, MatDivider, MatDialog, MatDialogContainer,FormsModule, FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { User } from '../model/User';
 import { UserManagementService } from '../user-management.service';
 import swal from 'sweetalert2';
+import { HttpClient } from '@angular/common/http';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ModifyDialogUserComponent } from '../modify-dialog-user/modify-dialog-user.component';
 
 @Component({
   selector: 'app-user-dashboard',
@@ -20,8 +23,14 @@ user: User = {
   lastname: null,
   password: ''
 }
-  constructor(public service: UserManagementService)  {}
-
+public dataList:[User] ;
+    public newObject:string;
+    public newStatus:string;
+    public newTitle:string;
+  constructor(public service: UserManagementService,
+     private http:HttpClient,
+     @Inject(MAT_DIALOG_DATA) public data: {name: string} ,
+     public dialog:MatDialog)  {}
   ngOnInit(): void {
    { let resp = this.service.getUsers();
     resp.subscribe((data)=>this.users = data);
@@ -37,7 +46,6 @@ user: User = {
       console.log(data);
     }); 
     console.log(id);
-
   
   }*/
 
@@ -107,4 +115,23 @@ user: User = {
     // });
   }
 
-}
+
+
+  
+  
+  public openDialog = () => {
+    const dialogRef = this.dialog.open(ModifyDialogUserComponent, {
+      width: '480px',
+      height:'480px',
+      data: {name: this.id},
+    })};
+ 
+    public id: number;
+    public username: string;
+    public email: string;
+
+    public firstname: string;
+    public lastname: string;
+
+  }   
+   
