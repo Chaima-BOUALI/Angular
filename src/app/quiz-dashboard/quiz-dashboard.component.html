@@ -44,18 +44,19 @@
     <td><span class="badge bg-teal">{{q.worstScore}}<b style="font-size: 5px; color:darkblue">/20</b></span></td>
 <td>
     
-    <a href="#" class="btn btn-app bg-info">
-        <i class="fas fa-edit"></i> Edit
-        </a>
-        <a href="#" class="btn btn-app bg-danger">
-            <i class="fas fa-trash"></i> Delete
+    <a  class="btn btn-small bg-info">
+    
+        <i class="fas fa-edit"  type="button" (click)="openDialog()"></i>
+    </a>
+        <a href="#" class="btn btn-small bg-danger">
+            <i class="fas fa-trash"></i> 
             </a>
-            <a href="#" class="btn btn-app bg-warning">
-                <i class="fas fa-file-download"></i> Download
+            <a href="#" class="btn btn-small bg-warning">
+                <i class="fas fa-file-download"></i> 
                 </a>
                 </td>
                 <td>
-                    <a href="/quizdash" class="btn btn-app bg-transparent">
+                    <a href="/quizdash" class="btn btn-small bg-gradient-indigo">
                         <i class="fas fa-file-signature"></i> Your Score
                         </a> 
                 </td>

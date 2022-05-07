@@ -1,0 +1,40 @@
+
+    <div class="container">
+        <div class="card">
+    <div class="card-header">
+        <div class="card-body" style="font-size: 20px;"class="card bg-teal" align="center">
+       
+            <strong> Modify Information    </strong>     
+        </div>
+
+        <p class="product-title">Modify</p>
+
+
+
+
+        <form  (submit)="{sendPost}">
+  
+  Partnership Name <input #Name (keyup)="processKeyupName(Name.value)" style="border: #0a001f;border-radius: 4px" class="text-black"  formControlName="Partner Name" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  Partnership Description <input #Desc (keyup)="processKeyupDesc(Desc.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="Partnership Description" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  Partnership Attendency to events <input #Attendency (keyup)="processKeyupAttendency(Attendency.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="Partnership Attandency in events" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  
+
+  <br>
+  <br>
+  <button mat-button type="submit" class="btn-success" style="height: 40px;width: 120px">Submit Changes</button>
+</form>
+
+
+</div></div></div>

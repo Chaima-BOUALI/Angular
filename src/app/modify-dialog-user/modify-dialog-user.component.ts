@@ -20,9 +20,9 @@ export class ModifyDialogUserComponent implements OnInit {
   public Adress : string;
 
     constructor(public MatDialogRef: MatDialogRef<ModifyDialogUserComponent>,
-                @Inject(MAT_DIALOG_DATA) public data: User, public http:HttpClient, public MatDialog: MatDialog, public MatDividerModule: MatDivider, public MatDivider:MatDivider,  private formBuilder: FormBuilder,) { }
+                @Inject(MAT_DIALOG_DATA) public data: User, public http:HttpClient, public MatDialog: MatDialog, public MatDividerModule: MatDivider, public MatDivider:MatDivider,  private formBuilder: FormBuilder) { }
   
-                public sendPost= this.http.post("http://localhost:8000/api/users/modifyUser", this.data).subscribe(response => {console.log(response)});
+                public sendPost= this.http.put("http://localhost:8000/api/QuestionsQuiz/modify-questions", this.data).subscribe(response => {console.log(response)});
                 processKeyupAdress(value: string) {
                   this.Adress+=value;
                 }

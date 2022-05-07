@@ -54,6 +54,9 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {DragDropModule} from "@angular/cdk/drag-drop";
 import {MatDivider, MatDividerModule} from "@angular/material/divider";
+import { ModifyDialogQuizComponent } from './modify-dialog-quiz/modify-dialog-quiz.component';
+import { ModifyDialogPartnershipsComponent } from './modify-dialog-partnerships/modify-dialog-partnerships.component';
+import { ModifyDialogFormComponent } from './modify-dialog-form/modify-dialog-form.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
@@ -137,7 +140,10 @@ const routes: Routes = [
     ModifyDialogComponent,
     MonthlystatComponent,
     MailComponent,
-    ModifyDialogUserComponent, 
+    ModifyDialogUserComponent,
+    ModifyDialogQuizComponent,
+    ModifyDialogPartnershipsComponent,
+    ModifyDialogFormComponent, 
     
   ],
   entryComponents:[ModifyDialogUserComponent],

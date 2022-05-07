@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ForumService } from '../forum.service';
 import swal from 'sweetalert2';
+import { ModifyDialogFormComponent } from '../modify-dialog-form/modify-dialog-form.component';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { HttpClient } from '@angular/common/http';
+import { Forum } from '../model/Forum';
 
 @Component({
   selector: 'app-forum',
@@ -9,7 +13,11 @@ import swal from 'sweetalert2';
 })
 export class ForumComponent implements OnInit {
 forums:any;
-  constructor(public service:ForumService) { }
+public dataList:[Forum] ;
+    public forumName:String;
+    public forumDescription:String;
+    public CreatedAt:number; 
+  constructor(public service:ForumService, private http:HttpClient,@Inject(MAT_DIALOG_DATA) public data: {name: string},public dialog:MatDialog) { }
 
   ngOnInit(): void {
     let resp = this.service.showAll();
@@ -49,9 +57,10 @@ forums:any;
     // });
   }
   
-  
-  comment(forum_id:any) {
-    console.log(forum_id);
-  
-  }
+  public openDialog = () => {
+    const dialogRef = this.dialog.open(ModifyDialogFormComponent, {
+      width: '480px',
+      height:'480px',
+      data: {name: this.forums},
+    })};
 }

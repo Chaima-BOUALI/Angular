@@ -32,11 +32,12 @@
         <td>{{p.partnershipDescription}}</td>
         <td><span class="badge bg-teal"><td>{{p.EventAttendency}}</td></span></td>
        
-        <td><a href="/partnershipsdash" class="btn btn-app bg-info">
-          <i class="fas fa-edit"></i> Edit
-          </a>
-          <a href="/partnershipsdash" class="btn btn-app bg-danger">
-              <i class="fas fa-trash" type="submit" name="delete_detelepartnership"  (click)="DeletePartnership(p.idPartnership)"></i> Delete
+        <td><a  class="btn btn-small bg-info">
+    
+          <i class="fas fa-edit"  type="button" (click)="openDialog()"></i>
+      </a>
+          <a href="/partnershipsdash" class="btn btn-small bg-danger">
+              <i class="fas fa-trash" type="submit" name="delete_detelepartnership"  (click)="DeletePartnership(p.idPartnership)"></i>
               </a>
             </td>
         

@@ -2,23 +2,27 @@
   <i class="fas fa-save"></i> Add New Forum Manually
   </a>
   <div *ngFor= "let f of forums">
-<div class="info-box bg-gradient-teal">
+<div class="info-box bg-gradient-indigo">
     <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
     <div class="info-box-content">
       <span class="info-box-text"><i class="fab fa-react mr-2"></i>{{f.forumName}}</span>
       <span class="info-box-text"><i class="fab fa-save mr-2"></i>{{f.forumDescription}}</span>
 
-      <span class="info-box-number">51,460</span>
       <div class="progress">
         <div class="progress-bar" style="width: 70%"></div>
       </div>
       <span class="progress-description">
         70% Skills Increase in 30 Days
       </span>
+      <div class="btn bg-transparent">
+    
+        <i class="fas fa-edit"  type="button" (click)="openDialog()"></i>
+      </div>
       <div class="btn btn-bg-danger">
         <i class="fas fa-trash" type="button" (click)="Deleteforum(f.id)">
       </i>
       </div>
+   
     </div>
     <a href="/articles" class="small-box-footer">
         More info <i class="fas fa-arrow-circle-right"></i>

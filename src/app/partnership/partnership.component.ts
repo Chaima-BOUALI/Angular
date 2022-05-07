@@ -8,7 +8,7 @@ import { PartnershipService } from '../partnership.service';
   styleUrls: ['./partnership.component.css']
 })
 export class PartnershipComponent implements OnInit {
-  partnership:Partnership = new Partnership("","",0,"");
+  partnership:Partnership = new Partnership(0,"","",0,"");
   message:any; 
   constructor(public service : PartnershipService) { }
 

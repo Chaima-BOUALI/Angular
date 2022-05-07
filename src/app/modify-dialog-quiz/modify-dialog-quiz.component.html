@@ -1,0 +1,50 @@
+
+  
+        <div class="card">
+            <div class="container">
+    <div class="card-header">
+        <div class="card-body" style="font-size: 20px;"class="card bg-teal" align="center">
+       
+            <strong> Modify Information    </strong>     
+        </div>
+
+
+
+        <form  (submit)="{sendPost}">
+  
+ 
+  Quiz Name <input #name (keyup)="processKeyupName(name.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="Quiz Name" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  Quiz Descriptiong <input #description (keyup)="processKeyupFirstdescription(description.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="Quiz Description" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  Best Score <input #bestScore (keyup)="processKeyupbestScore(bestScore.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="Best Score" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  Worst Score  <input #worstScore (keyup)="processKeyupworstScore(worstScore.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="Worst Score" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+ Quiz Created At  <input #date (keyup)="processKeyupdate(date.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="Creation Date" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+
+
+
+  <br>
+  <br>
+  <button mat-button type="submit" class="btn-success" style="height: 40px;width: 120px">Submit Changes</button>
+</form>
+
+
+</div></div></div>

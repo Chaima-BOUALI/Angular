@@ -1,0 +1,37 @@
+
+    <div class="container">
+        <div class="card">
+    <div class="card-header">
+        <div class="card-body" style="font-size: 20px;"class="card bg-teal" align="center">
+       
+            <strong> Modify Information    </strong>     
+        </div>
+
+
+
+        <form  (submit)="{sendPost}">
+  
+   Forum Object <input #forumName (keyup)="processKeyupName(forumName.value)" style="border: #0a001f;border-radius: 4px" class="text-black"  formControlName="Forum Object" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  Forum Description <input #forumDescription (keyup)="processKeyupFirstdescription(forumDescription.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="Forum Description" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  Creation Date <input #createdAt (keyup)="processKeyupdate(createdAt.value)" style="border: #0a0a001f;border-radius: 4px" class="text-black"  formControlName="Forum Creation Date" >
+  <br>
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  
+
+  <br>
+  <br>
+  <button mat-button type="submit" class="btn-success">Submit Changes</button>
+</form>
+
+
+</div></div></div>

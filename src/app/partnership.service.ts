@@ -6,7 +6,7 @@ import { Partnership } from './model/Partnership';
   providedIn: 'root'
 })
 export class PartnershipService {
-partnership:Partnership= new Partnership("","",0,"")
+partnership:Partnership= new Partnership(0,"","",0,"")
 
   constructor(public http:HttpClient) { }
   public addPartnerships(partnership:Partnership){
